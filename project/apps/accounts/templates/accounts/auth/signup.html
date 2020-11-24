@@ -1,0 +1,17 @@
+{% extends "accounts/auth/layout.html" %}
+{% block auth_content %}
+<section>
+  <header>
+    <h2 class="title md">Sign up</h2>
+  </header>
+  <form method="POST" class="form">
+    {% csrf_token %}
+    <ul class="form__list">
+      {{ form.as_ul }}
+    </ul>
+    <div class="form__submit">
+      <button class="primary-btn" type="submit">Sign Up</button>
+    </div>
+  </form>
+</section>
+{% endblock auth_content %}

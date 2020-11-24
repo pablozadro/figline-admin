@@ -1,0 +1,62 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Inputs
+* ---------------------------------------------------------------------------- *
+*/
+
+label {
+  font-family: $co-type-sans;
+  font-weight: $co-type-extrabold;
+  color: $co-color-black;
+}
+
+%InputMaterial {
+  @include colorMixInteractive('white');
+  border: 1px solid mix('white', 'border-color');
+  padding: $co-box-yy $co-box-xx;
+  border-radius: $co-box-radius;
+
+  &::placeholder { color: $co-color-gray-4; }
+
+  &.is--warn {
+    @include colorMixInteractive('warn');
+    border: 1px solid mix('warn', 'border-color');
+    &::placeholder { color: mix('warn', 'color'); }
+  }
+
+  &.is--error {
+    @include colorMixInteractive('error');
+    border: 1px solid mix('error', 'border-color');
+    &::placeholder { color: mix('error', 'color'); }
+  }
+
+  &.is--ok {
+    @include colorMixInteractive('ok');
+    border: 1px solid mix('ok', 'border-color');
+    &::placeholder { color: mix('ok', 'color'); }
+  }
+}
+
+
+// Default
+
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='email'],
+input[type='phone'],
+select,
+textarea {
+  @extend %InputMaterial;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 10rem;
+}

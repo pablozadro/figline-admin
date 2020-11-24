@@ -1,0 +1,27 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Brand
+* ---------------------------------------------------------------------------- *
+*/
+
+%Brand {
+  @include circle(3em);
+	display: inline-block;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+
+.primary-brand {
+  @extend %Brand;
+  background-image: url('../images/core/brand/core-brand-primary.svg');
+}
+
+.black-brand {
+  @extend %Brand;
+  background-image: url('../images/core/brand/core-brand-black.svg');
+}
+
+.white-brand {
+  @extend %Brand;
+  background-image: url('../images/core/brand/core-brand-white.svg');
+}

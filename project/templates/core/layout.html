@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block styles %}
+<link href="{% static 'css/core.css' %}" crossorigin="anonymous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+{% endblock styles %}
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon/favicon-32.png' %}"/>
+<title>Figline-Admin</title>
+</head>
+<body>
+{% block modals %}{% endblock modals %}
+<div class="app">
+  <nav class="topnav">
+    <a class="topnav__brand" href="/"></a>
+    <div class="topnav__content" id="topnav-content">
+      <ul class="topnav__menu">
+        <li>
+          <a class="link black" href="/">inicio</a>
+        </li>
+        {% if request.user.is_authenticated %}
+          <li>
+            <a class="link black" href="{% url 'ingredients:list' %}">ingredients</a>
+          </li>
+          <li>
+            <a class="link black" href="{% url 'recipes:list' %}">recipes</a>
+          </li>
+        {% endif %}
+      </ul>
+      <ul class="topnav__menu">
+      {% if request.user.is_authenticated %}
+        <li>
+          <a class="link black" href="{% url 'accounts:logout' %}">logout</a>
+        </li>
+        <li>
+          <a class="link black" href="{% url 'accounts:profile' %}">
+            <i class="material-icons">account_circle</i>
+            <span>account</span>
+          </a>
+        </li>
+        <li>
+          <a class="link black" href="/admin">
+            <i class="material-icons">settings</i>
+          </a>
+        </li>
+      {% else %}
+        <li>
+          <a class="link black" href="{% url 'accounts:login' %}"><i class="material-icons">account_circle</i> login</a>
+        </li>
+      {% endif %}
+      </ul>
+    </div>
+    <button class="topnav__toggler" data-event="topnav:toggle">
+      <i class="material-icons">menu</i>
+    </button>
+  </nav>
+  <div class="app-content">
+    {% block content %}{% endblock content %}
+  </div>
+</div>
+{% block scripts %}
+<script src="{% static 'js/core.bundle.js' %}"></script>
+{% endblock scripts %}
+</body>
+</html>

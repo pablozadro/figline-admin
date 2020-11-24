@@ -1,0 +1,32 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Modals
+* ---------------------------------------------------------------------------- *
+*/
+
+.modal {
+  display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: $co-layout-index-modals;
+	background-color: mix('black', 'alpha-background-color');
+	color: mix('black', 'color');
+
+  &.is--active {
+    display: block;
+  }
+
+	& > button {
+		position: absolute;
+		top: $co-box-x;
+		right: $co-box-x;
+	}
+
+	&__content {
+		padding: $co-box-x;
+	}
+}
+

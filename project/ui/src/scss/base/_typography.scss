@@ -1,0 +1,128 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Typography
+* ---------------------------------------------------------------------------- *
+*/
+
+body {
+  font-family: $co-type-sans;
+  font-size: deep($co-type-sizes, 'rg', 'font-size');
+  line-height: deep($co-type-sizes, 'rg', 'line-height');
+  font-weight: $co-type-normal;
+  color: $co-color-gray-3;
+  background-color: $co-color-white;
+}
+
+
+// Paragraphs
+
+p {
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+
+// Titles
+
+h1,h2,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.title {
+  font-family: $co-type-sans;
+  font-weight: $co-type-extrabold;
+  color: $co-color-black;
+}
+
+
+// Sizes
+
+@each $name, $map in $co-type-sizes {
+  .#{$name} {
+    font-size: map-get($map, 'font-size');
+    line-height: map-get($map, 'line-height');
+  }
+}
+
+
+// Colors
+
+@each $name, $value in $co-colors {
+  .#{$name} {
+    color: $value;
+  }
+}
+
+
+// Links
+
+.link {
+  font-family: $co-type-sans;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+// Utils
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.align-right { text-align: right; }
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.cap { text-transform: capitalize; }
+.upper { text-transform: uppercase; }
+.lower { text-transform: lowercase; }
+
+
+// Html5
+
+strong,
+.strong {
+  font-family: $co-type-sans;
+  font-weight: $co-type-extrabold;
+  color: $co-color-black;
+}
+
+em,
+.em {
+  font-style: italic;
+}
+
+mark,
+.mark {
+  background-color: lighten($co-color-warn, 15);
+}
+
+abbr, .abbr {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: $co-type-extrabold;
+  color: $co-color-black;
+  text-decoration: underline;
+}
+
+time, .time {
+  font-family: $co-type-mono;
+  letter-spacing: 1px;
+}
+
+small, .small {
+  font-size: $co-type-sm;
+  color: mix('gray', 'color');
+}
+
+code, .code {
+  font-family: $co-type-mono;
+  background-color: lighten($co-color-warn, 20);
+  padding: 0.5em;
+}
+

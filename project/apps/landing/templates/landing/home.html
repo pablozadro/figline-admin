@@ -1,0 +1,19 @@
+{% extends "core/layout.html" %}
+{% load static %}
+{% block content %}
+<section class="align-center">
+  <header>
+    <h1 class="title md">Figline Admin</h1>
+  </header>
+
+  <span class="black-brand"></span>
+
+  <div class="box-mg-v">
+    {% if request.user.is_authenticated %}
+      <p>Welcome <a class="link primary" href="{% url 'accounts:profile' %}" >{{ request.user.email }}</a></p>
+    {% else %}
+      <p>You must authenticate. <a class="link primary" href="{% url 'accounts:login' %}" >Login</a></p>
+    {% endif %}
+  </div>
+</section>
+{% endblock content %}

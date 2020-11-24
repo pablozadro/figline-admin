@@ -1,0 +1,20 @@
+[
+{
+  "model": "recipes.recipe",
+  "pk": 1,
+  "fields": {
+    "title": "salsa bechamel",
+    "category": 1,
+    "portion_portions": 4,
+    "portion_size": 1000,
+    "portion_unit": "ml",
+    "portion_detail": "Rinde para 4 porciones de pastas.",
+    "favourite": true,
+    "draft": false,
+    "detail": "-",
+    "steps": "-",
+    "created": "2020-10-29T20:05:08.644Z",
+    "updated": "2020-10-29T20:05:08.644Z"
+  }
+}
+]

@@ -1,0 +1,43 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Tables
+* ---------------------------------------------------------------------------- *
+*/
+
+.table {
+  text-align: left;
+  border-collapse: collapse;
+
+  & > thead {
+    font-weight: $co-type-extrabold;
+    color: $co-color-black;
+  }
+
+  & > thead > tr > th,
+  & > tbody > tr > td {
+    padding: 0.35rem 2rem 0.15rem 0;
+  }
+
+  & > thead > tr > th {
+    border-bottom: 1px solid mix('gray', 'border-color');
+  }
+
+  & > tbody > tr > td {
+    border-bottom: 1px solid mix('gray', 'border-color');
+  }
+
+  & > tbody > tr:last-child > td {
+    border-bottom: none;
+  }
+
+  &.is--stripped {
+    & > thead > tr > th,
+    & > tbody > tr > td {
+      padding-left: $co-box-x / 2;
+    }
+
+    & > tbody > tr:nth-child(even) > td {
+      background-color: mix('gray', 'background-color');
+    }
+  }
+}

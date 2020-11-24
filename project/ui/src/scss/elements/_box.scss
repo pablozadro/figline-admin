@@ -1,0 +1,38 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Box
+* ---------------------------------------------------------------------------- *
+*/
+
+.box { padding: $co-box-y $co-box-x; }
+.box-radius { border-radius: $co-box-radius; }
+
+.block { display: block; }
+.inline-block { display: inline-block; }
+
+.box-mg-b { margin-bottom: $co-box-x; }
+.box-mg-t { margin-top: $co-box-x; }
+
+.box-mg-v {
+  @extend .box-mg-b;
+  @extend .box-mg-t;
+}
+
+.box-mg-r { margin-right: $co-box-x; }
+.box-mg-l { margin-left: $co-box-x; }
+
+.box-mg-h {
+  @extend .box-mg-l;
+  @extend .box-mg-r;
+}
+
+.box-mg {
+  @extend .box-mg-v;
+  @extend .box-mg-h;
+}
+
+.light-box {
+  @extend .box;
+  @include colorMix('gray');
+  border-radius: $co-box-radius;
+}

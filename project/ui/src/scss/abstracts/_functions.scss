@@ -1,0 +1,28 @@
+// -- DEEP ---------------------------------------------------------------------
+// Get the the value from a nested map
+// i.e: deep($somemap, 'submap','key')
+
+@function deep($map, $submap, $property) {
+  @if map-has-key($map, $submap) {
+    $_subMap: map-get($map, $submap);
+
+    @if map-has-key($_subMap, $property) {
+      $prop: map-get($_subMap, $property);
+      @return $prop;
+    }
+    @error 'The map `#{$_subMap}` has no prop `#{$property}`';
+    @return null;
+  }
+
+	@error 'The map `#{$map}` has no submap `#{$submap}`';
+	@return null;
+}
+
+// -- MIX ---------------------------------------------------------------------
+// Get the the value for a color mix
+// i.e: mix('primary','color')
+
+@function mix($mix, $property) {
+  $value: deep($co-color-mixes, $mix, $property);
+  @return $value;
+}

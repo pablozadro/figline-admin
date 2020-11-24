@@ -1,0 +1,7 @@
+.errorlist {
+  & > li {
+    background-color: mix('warn', 'background-color');
+    padding: $co-box-y $co-box-x;
+    border-radius: $co-box-radius;
+  }
+}

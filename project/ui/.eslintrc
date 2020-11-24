@@ -1,0 +1,30 @@
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2015
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }, 
+  "rules": {
+      "quotes": [ "error", "single", { "avoidEscape": true, "allowTemplateLiterals": true } ],
+      "complexity": ["error", 8],
+      "strict": "off",
+      "no-unused-vars": [ "error", { "argsIgnorePattern": "^_", "args": "none" } ]
+  },
+  "globals": {
+    "jasmine": true,
+    "require": true,
+    "module": true,
+    "Promise": true,
+    "expect": true,
+    "describe": true,
+    "it": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true  
+  }
+}

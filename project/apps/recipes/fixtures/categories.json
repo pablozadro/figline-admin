@@ -1,0 +1,9 @@
+[
+{
+  "model": "recipes.recipecategory",
+  "pk": 1,
+  "fields": {
+    "title": "salsas"
+  }
+}
+]

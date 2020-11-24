@@ -1,0 +1,105 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Topnav
+* ---------------------------------------------------------------------------- *
+*/
+
+$co-topnav-brand-height:  40px;
+$co-topnav-brand-width:   40px;
+$co-topnav-breakpoint:    768px;
+
+
+.topnav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: $co-layout-index-topnav;
+	min-height: $co-layout-topnav-height;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 $co-box-x;
+	background-color: mix('white', 'alpha-background-color');
+	border-bottom: 1px solid mix('white', 'border-color');
+}
+
+.topnav__brand {
+	display: inline-flex;
+	width: $co-topnav-brand-width;
+	height: $co-topnav-brand-height;
+  border-radius: $co-topnav-brand-height;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../images/core/brand/core-brand-black.svg');
+	margin-right: $co-box-x;
+	vertical-align: bottom;
+}
+
+.topnav__content {
+	display: inline-flex;
+	flex-flow: row wrap;
+	flex-grow: 1;
+	justify-content: space-between;
+
+	@media ( max-width: $co-topnav-breakpoint ) {
+		display: none;
+	}
+}
+
+.topnav__content.is--active {
+	@media ( max-width: $co-topnav-breakpoint ) {
+		display: block;
+		position: fixed;
+		top: $co-layout-topnav-height;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: $co-layout-index-topnav;
+		background-color: mix('white', 'alpha-background-color');
+		padding: $co-box-x;
+	}
+}
+
+.topnav__menu {
+	display: flex;
+	flex-flow: row wrap;
+  align-items: center;
+	margin: 0;
+	padding: 0;
+  list-style-type: none;
+
+	& > li {
+		margin: 0 $co-box-x 0 0;
+    padding: 0;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	@media ( max-width: $co-topnav-breakpoint ) {
+		display: block;
+
+		& > li {
+			margin: 0.5rem 0;
+			padding: 0.5rem 0;
+		}
+	}
+}
+
+.topnav__toggler {
+	display: none;
+  background-color: mix('gray', 'alpha-background-color');
+  color: mix('gray', 'color');
+	padding: 0.35rem;
+	text-align: center;
+	border-radius: $co-box-radius;
+	border: none;
+
+	@media ( max-width: $co-topnav-breakpoint ) {
+		display: inline-flex;
+	}
+}

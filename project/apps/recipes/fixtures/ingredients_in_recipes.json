@@ -1,0 +1,98 @@
+[
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 1,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 1,
+    "amount": "60.00",
+    "unit": "gr",
+    "optional": false,
+    "relevant": false
+  }
+},
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 2,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 10,
+    "amount": "60.00",
+    "unit": "gr",
+    "optional": false,
+    "relevant": false
+  }
+},
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 3,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 7,
+    "amount": "1000.00",
+    "unit": "ml",
+    "optional": false,
+    "relevant": false
+  }
+},
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 4,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 8,
+    "amount": "1.00",
+    "unit": "un",
+    "optional": true,
+    "relevant": false
+  }
+},
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 5,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 9,
+    "amount": "1.00",
+    "unit": "un",
+    "optional": true,
+    "relevant": false
+  }
+},
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 6,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 5,
+    "amount": "0.00",
+    "unit": "c/n",
+    "optional": false,
+    "relevant": false
+  }
+},
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 7,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 6,
+    "amount": "0.00",
+    "unit": "c/n",
+    "optional": false,
+    "relevant": false
+  }
+},
+{
+  "model": "recipes.ingredientinrecipe",
+  "pk": 8,
+  "fields": {
+    "recipe": 1,
+    "ingredient": 11,
+    "amount": "0.00",
+    "unit": "c/n",
+    "optional": false,
+    "relevant": true
+  }
+}
+]

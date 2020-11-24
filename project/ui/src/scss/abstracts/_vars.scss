@@ -1,0 +1,190 @@
+// -- Global -------------------------------------------------------------------
+
+$co-gold: 1.618; /* stylelint-disable-line number-max-precision */
+
+
+// -- Layout ----------------------------------------------------------------------
+
+$co-layout-index-modals: 1000;
+$co-layout-index-topnav: 100;
+$co-layout-index-base:   0;
+
+$co-layout-topnav-height: 60px;
+
+$co-layout-aside-col-width:     20%;
+$co-layout-aside-content-width: 50%;
+$co-layout-aside-aside-width:   30%;
+
+
+// -- Box ----------------------------------------------------------------------
+
+// fixed sizes
+$co-box-x: 1rem;
+$co-box-y: $co-box-x / $co-gold;
+
+// dinamic sizes
+$co-box-xx: 0.75em;
+$co-box-yy: $co-box-xx / $co-gold;
+
+$co-box-radius: 0.35rem;
+
+
+// Type ------------------------------------------------------------------------
+
+// families
+$co-type-sans:  sans-serif;
+$co-type-serif: serif;
+$co-type-mono:  monospace;
+
+// weights
+$co-type-light:     100;
+$co-type-normal:    300;
+$co-type-bold:      500;
+$co-type-extrabold: 900;
+
+// sizes
+$co-type-xs:  0.7rem;
+$co-type-sm:  0.8rem;
+$co-type-rg:  1rem;
+$co-type-md:  1rem * $co-gold;
+$co-type-lg:  1rem * ( $co-gold * 2 );
+$co-type-xl:  1rem * ( $co-gold * 3 );
+$co-type-xxl: 1rem * ( $co-gold * 4 );
+
+$co-type-sizes: (
+  xs: (
+    font-size: $co-type-xs,
+    line-height: 1.4
+  ),
+  sm: (
+    font-size: $co-type-sm,
+    line-height: 1.4
+  ),
+  rg: (
+    font-size: $co-type-rg,
+    line-height: 1.4
+  ),
+  md: (
+    font-size: $co-type-md,
+    line-height: 1.4
+  ),
+  lg: (
+    font-size: $co-type-lg,
+    line-height: 1.2
+  ),
+  xl: (
+    font-size: $co-type-xl,
+    line-height: 1
+  ),
+  xxl: (
+    font-size: $co-type-xxl,
+    line-height: 1
+  ),
+);
+
+
+// -- Colors -------------------------------------------------------------------
+
+$co-color-black: rgb(10, 10, 10);
+$co-color-gray-1: rgb(30, 30, 30);
+$co-color-gray-2: rgb(60, 60, 60);
+$co-color-gray-3: rgb(90, 90, 90);
+$co-color-gray-4: rgb(180, 180, 180);
+$co-color-gray-5: rgb(160, 160, 160);
+$co-color-gray-6: rgb(140, 140, 140);
+$co-color-gray-7: rgb(215, 215, 215);
+$co-color-gray-8: rgb(235, 235, 235);
+$co-color-gray-9: rgb(240, 240, 240);
+$co-color-white:  rgb(250, 250, 250);
+
+$co-color-primary:    rgb(21, 192, 177);
+$co-color-secondary:  rgb(12, 118, 204);
+$co-color-ok:         rgb(37, 168, 120);
+$co-color-warn:       rgb(249, 234, 105);
+$co-color-error:      rgb(204, 60, 55);
+
+$co-colors: (
+  'black': $co-color-black,
+  gray-1: $co-color-gray-1,
+  gray-2: $co-color-gray-2,
+  gray-3: $co-color-gray-3,
+  gray-4: $co-color-gray-4,
+  gray-5: $co-color-gray-5,
+  gray-6: $co-color-gray-6,
+  gray-7: $co-color-gray-7,
+  gray-8: $co-color-gray-8,
+  gray-9: $co-color-gray-9,
+  'white': $co-color-white,
+  primary: $co-color-primary,
+  secondary: $co-color-secondary,
+  ok: $co-color-ok,
+  warn: $co-color-warn,
+  error: $co-color-error
+);
+
+$co-color-mixes: (
+  'black': (
+    color: $co-color-white,
+    background-color: $co-color-gray-3,
+    border-color: $co-color-gray-2,
+    hover-background-color: $co-color-gray-2,
+    alpha-background-color: rgba($co-color-black, 0.9),
+    disabled-color: rgba($co-color-white, 0.5)
+  ),
+  'gray': (
+    color: $co-color-gray-3,
+    background-color: $co-color-gray-9,
+    border-color: $co-color-gray-8,
+    hover-background-color: $co-color-gray-8,
+    alpha-background-color: rgba($co-color-white, 0.9),
+    disabled-color: $co-color-gray-7
+  ),
+  'white': (
+    color: $co-color-gray-3,
+    background-color: $co-color-white,
+    border-color: $co-color-gray-8,
+    hover-background-color: $co-color-gray-8,
+    alpha-background-color: rgba($co-color-white, 0.9),
+    disabled-color: $co-color-gray-7
+  ),
+  primary: (
+    color: $co-color-white,
+    background-color: $co-color-primary,
+    border-color: darken($co-color-primary, 10),
+    hover-background-color: darken($co-color-primary, 10),
+    alpha-background-color: rgba($co-color-primary, 0.9),
+    disabled-color: rgba($co-color-white, 0.5)
+  ),
+  secondary: (
+    color: $co-color-white,
+    background-color: $co-color-secondary,
+    border-color: darken($co-color-secondary, 10),
+    hover-background-color: darken($co-color-secondary, 10),
+    alpha-background-color: rgba($co-color-secondary, 0.9),
+    disabled-color: rgba($co-color-white, 0.5)
+  ),
+  warn: (
+    color: $co-color-black,
+    background-color: $co-color-warn,
+    border-color: darken($co-color-warn, 10),
+    hover-background-color: darken($co-color-warn, 10),
+    alpha-background-color: rgba($co-color-warn, 0.9),
+    disabled-color: rgba($co-color-black, 0.5)
+  ),
+  error: (
+    color: $co-color-white,
+    background-color: $co-color-error,
+    border-color: darken($co-color-error, 10),
+    hover-background-color: darken($co-color-error, 10),
+    alpha-background-color: rgba($co-color-error, 0.9),
+    disabled-color: rgba($co-color-white, 0.5)
+  ),
+  ok: (
+    color: $co-color-white,
+    background-color: $co-color-ok,
+    border-color: darken($co-color-ok, 10),
+    hover-background-color: darken($co-color-ok, 10),
+    alpha-background-color: rgba($co-color-ok, 0.9),
+    disabled-color: rgba($co-color-white, 0.5)
+  )
+);

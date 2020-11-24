@@ -1,0 +1,31 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Buttons
+* ---------------------------------------------------------------------------- *
+*/
+
+%Button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: default;
+  background-image: none;
+  border-radius: $co-box-radius;
+  margin: 0;
+  padding: $co-box-yy $co-box-xx;
+  min-width: 6rem;
+
+  & > .material-icons + span,
+  & > span + .material-icons {
+    margin-left: $co-box-xx / 2;
+  }
+}
+
+@each $name, $map in $co-color-mixes {
+
+  .#{$name}-btn {
+    @extend %Button;
+    @include colorMixInteractive($name);
+    border: 1px solid map-get($map, 'border-color');
+  }
+}

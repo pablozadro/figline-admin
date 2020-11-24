@@ -1,0 +1,40 @@
+/**
+* ---------------------------------------------------------------------------- *
+* App
+* ---------------------------------------------------------------------------- *
+*/
+
+.app {
+  position: relative;
+  z-index: $co-layout-index-base;
+  min-height: 100vh;
+  padding: $co-layout-topnav-height 0 0 0;
+}
+
+.app-content {
+  min-height: 100vh;
+}
+
+.app-aside {
+  display: flex;
+}
+
+.app-aside__col {
+  width: $co-layout-aside-col-width;
+  background-color: mix('gray', 'background-color');
+}
+
+.app-aside__content {
+  width: $co-layout-aside-content-width;
+}
+
+.app-aside__aside {
+  width: $co-layout-aside-aside-width;
+  background-color: mix('gray', 'background-color');
+}
+
+.app-aside__col,
+.app-aside__aside {
+  height: calc(100vh - #{$co-layout-topnav-height});
+  overflow-y: scroll;
+}

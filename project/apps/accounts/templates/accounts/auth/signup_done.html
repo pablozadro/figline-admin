@@ -1,0 +1,9 @@
+{% extends "accounts/auth/layout.html" %}
+{% block auth_content %}
+<section>
+  <header>
+    <h2 class="title md">Sign up</h2>
+  </header>
+  <a class="link primary" href="{% url 'accounts:login' %}">Login</a>
+</section>
+{% endblock auth_content %}

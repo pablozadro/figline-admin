@@ -1,0 +1,44 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Flex
+* ---------------------------------------------------------------------------- *
+*/
+
+%Flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-baseline {
+  @extend %Flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+ul.flex-baseline {
+  @extend .flex-baseline;
+  list-style-type: none;
+  padding: 0;
+
+  & > li {
+    margin-right: $co-box-x;
+    margin-bottom: $co-box-x;
+  }
+}
+
+.flex-center {
+  @extend %Flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+ul.flex-center {
+  @extend .flex-center;
+  list-style-type: none;
+  padding: 0;
+
+  & > li {
+    margin-right: $co-box-x;
+    margin-bottom: $co-box-x;
+  }
+}

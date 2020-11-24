@@ -1,0 +1,123 @@
+[
+{
+  "model": "ingredients.ingredient",
+  "pk": 1,
+  "fields": {
+    "title": "harina 0000",
+    "category": 1,
+    "detail": "-",
+    "created": "2020-10-29T19:05:56.878Z",
+    "updated": "2020-10-29T19:05:56.878Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 2,
+  "fields": {
+    "title": "harina 000",
+    "category": 1,
+    "detail": "-",
+    "created": "2020-10-29T19:06:06.191Z",
+    "updated": "2020-10-29T19:06:06.191Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 3,
+  "fields": {
+    "title": "aceite de oliva",
+    "category": 2,
+    "detail": "-",
+    "created": "2020-10-29T19:06:15.841Z",
+    "updated": "2020-10-29T19:06:15.841Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 4,
+  "fields": {
+    "title": "aceite de girasol",
+    "category": 2,
+    "detail": "-",
+    "created": "2020-10-29T19:06:23.993Z",
+    "updated": "2020-10-29T19:06:23.993Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 5,
+  "fields": {
+    "title": "sal",
+    "category": 6,
+    "detail": "-",
+    "created": "2020-10-29T19:06:35.283Z",
+    "updated": "2020-10-29T19:06:35.283Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 6,
+  "fields": {
+    "title": "pimienta",
+    "category": 6,
+    "detail": "-",
+    "created": "2020-10-29T19:06:54.000Z",
+    "updated": "2020-10-29T19:06:54.000Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 7,
+  "fields": {
+    "title": "leche",
+    "category": 3,
+    "detail": "-",
+    "created": "2020-10-29T19:07:23.775Z",
+    "updated": "2020-10-29T19:07:23.775Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 8,
+  "fields": {
+    "title": "cebolla",
+    "category": 8,
+    "detail": "-",
+    "created": "2020-10-29T19:07:32.980Z",
+    "updated": "2020-10-29T19:07:32.980Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 9,
+  "fields": {
+    "title": "clavo de olor",
+    "category": 5,
+    "detail": "-",
+    "created": "2020-10-29T19:07:42.260Z",
+    "updated": "2020-10-29T19:07:42.260Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 10,
+  "fields": {
+    "title": "manteca",
+    "category": 3,
+    "detail": "-",
+    "created": "2020-10-29T19:10:42.260Z",
+    "updated": "2020-10-29T19:10:42.260Z"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 11,
+  "fields": {
+    "title": "nuez moscada",
+    "category": 5,
+    "detail": "-",
+    "created": "2020-10-29T19:10:42.260Z",
+    "updated": "2020-10-29T19:10:42.260Z"
+  }
+}
+]

@@ -1,0 +1,66 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Loading
+* ---------------------------------------------------------------------------- *
+*/
+
+$co-loading-bar-width:    6px;
+$co-loading-bar-height:   $co-loading-bar-width * 4;
+
+
+@keyframes loadingBarAnimation {
+  0% { height: $co-loading-bar-height; }
+  50% { height: 0; }
+  100% { height: $co-loading-bar-height; }
+}
+
+%LoadingBar {
+  display: inline-block;
+  position: absolute;
+  top: $co-loading-bar-width;
+  width: $co-loading-bar-width;
+  background-color: mix('primary', 'background-color');
+  border-radius: $co-loading-bar-width;
+  animation-duration: 750ms;
+  animation-name: loadingBarAnimation;
+  animation-iteration-count: infinite;
+}
+
+
+.loading {
+  display: inline-flex;
+  align-items: center;
+
+  &__label {
+    font-size: $co-type-sm;
+    color: mix('gray', 'color');
+    margin-left: 0.5rem;
+  }
+
+  &__wrapper {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    width: $co-loading-bar-width * 7;
+    height: $co-loading-bar-height + ($co-loading-bar-width * 2);
+    border-radius: $co-loading-bar-width;
+    background-color: mix('gray', 'background-color');
+  }
+
+  &__bar-1 {
+    @extend %LoadingBar;
+    left: $co-loading-bar-width;
+  }
+
+  &__bar-2 {
+    @extend %LoadingBar;
+    left: $co-loading-bar-width * 3;
+    animation-delay: 100ms;
+  }
+
+  &__bar-3 {
+    @extend %LoadingBar;
+    left: $co-loading-bar-width * 5;
+    animation-delay: 200ms;
+  }
+}

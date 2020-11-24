@@ -1,0 +1,98 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Forms
+* ---------------------------------------------------------------------------- *
+*/
+
+.form {
+	padding: $co-box-x 0;
+  max-width: 30rem;
+}
+
+.form__fieldset {
+  margin: $co-box-x 0;
+  border: 1px solid mix('gray', 'border-color');
+  border-radius: $co-box-radius;
+}
+
+
+.form__legend {
+  padding: 0 0.5rem;
+}
+
+.form__list {
+  list-style-type: none;
+  padding: 0;
+  margin: $co-box-x 0;
+
+  & > li {
+    margin: 0 0 $co-box-x 0;
+    padding: 0;
+
+    & > label {
+      display: block;
+      margin: 0 0 0.35rem 0;
+    }
+
+    & > input,
+    & > select,
+    & > textarea {
+      width: 100%;
+    }
+  }
+}
+
+.form__submit {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  & > a,
+  & > button,
+  & > input[type='submit'] {
+    margin: 0 0 0 1rem;
+  }
+}
+
+
+/**
+* ---------------------------------------------------------------------------- *
+* Inline Forms
+* ---------------------------------------------------------------------------- *
+*/
+
+.iform {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.iform__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    margin: 0 $co-box-x 0 0;
+    padding: 0;
+
+    & > label,
+    & > .label {
+      margin: 0 $co-box-x 0 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.iform__submit {
+  margin: 0 0 0 $co-box-x;
+}

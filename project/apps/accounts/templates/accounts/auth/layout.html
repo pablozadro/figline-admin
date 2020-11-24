@@ -1,0 +1,22 @@
+{% extends "core/layout.html" %}
+{% block content %}
+<div class="container">
+  <section>
+    <header>
+      <h2 class="title md">Auth</h2>
+    </header>
+
+    {% if messages %}
+    <div>
+      <ul class="list">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% block auth_content %}{% endblock auth_content %}
+  </section>
+</div>
+{% endblock content %}

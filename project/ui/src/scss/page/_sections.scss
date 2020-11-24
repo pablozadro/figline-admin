@@ -1,0 +1,43 @@
+section,
+article,
+header {
+  display: block;
+}
+
+section {
+  padding: $co-box-x;
+  margin: ($co-box-x * $co-gold * 2) 0 0 0;
+
+  & > header {
+    margin: 0 0 $co-box-x 0;
+  }
+}
+
+header {
+  padding: 0;
+
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > .title {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+article {
+  padding: 0;
+  margin: ($co-box-x * $co-gold * 2) 0 0 0;
+
+  & + & {
+    margin-top: ($co-box-x * $co-gold * 3);
+  }
+
+  & > header {
+    margin: 0 0 $co-box-x 0;
+    border-bottom: 1px solid mix('gray', 'border-color');
+  }
+}

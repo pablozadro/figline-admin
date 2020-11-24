@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "js:watch": "webpack-cli --config webpack/development.js",
+    "js:build": "webpack-cli --config webpack/production.js",
+    "js:lint": "eslint src/js",
+    "scss:watch": "sass src/scss/core.scss assets/css/core.css --style=expanded --watch",
+    "scss:build": "sass src/scss/core.scss assets/css/core.min.css --style=compressed",
+    "scss:lint": "stylelint src/scss/**/*.scss --syntax scss",
+    "scss:lint:fix": "stylelint src/scss/**/*.scss --syntax scss --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^7.3.1",
+    "sass": "^1.27.0",
+    "stylelint": "^13.6.1",
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-merge": "^5.2.0"
+  }
+}

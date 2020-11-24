@@ -1,0 +1,143 @@
+/**
+* ---------------------------------------------------------------------------- *
+* Grid
+* ---------------------------------------------------------------------------- *
+*/
+
+$co-grid-size:              12;
+$co-grid-gutter:            $co-box-x;
+$co-grid-container-width:   1024px;
+$co-grid-sm-breakpoint:     460px;
+$co-grid-md-breakpoint:     768px;
+$co-grid-lg-breakpoint:     1024px;
+
+
+// Mixins
+
+@mixin smallGrid {
+	@media ( min-width: $co-grid-sm-breakpoint ) {
+		@content;
+	}
+}
+
+@mixin mediumGrid {
+	@media ( min-width: $co-grid-md-breakpoint ) {
+		@content;
+	}
+}
+
+@mixin largeGrid {
+	@media ( min-width: $co-grid-lg-breakpoint ) {
+		@content;
+	}
+}
+
+@mixin row {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-left: $co-grid-gutter * -1;
+}
+
+@mixin column($size) {
+	width: percentage($size / $co-grid-size);
+	padding-left: $co-grid-gutter;
+	margin-top: 0;
+	margin-bottom: 0;
+	flex-grow: 0;
+}
+
+
+// Container
+
+.container {
+	max-width: $co-grid-container-width;
+	margin: 0 auto;
+}
+
+
+// Columns
+
+@for $size from 1 through $co-grid-size {
+  .col-sm-#{$size},
+  .col-#{$size},
+  .col-lg-#{$size} {
+    margin-bottom: $co-grid-gutter;
+  }
+}
+
+
+// Small
+
+@include smallGrid {
+	.row-sm {
+		@include row;
+		flex-direction: row;
+	}
+
+	.reverse-row-sm {
+		@include row;
+		flex-direction: row-reverse;
+	}
+
+	@for $size from 1 through $co-grid-size {
+		.col-sm-#{$size} {
+			@include column($size);
+		}
+
+		.col-sm-offset-#{$size} {
+			margin-left: percentage($size / $co-grid-size);
+		}
+	}
+}
+
+
+// Medium
+
+@include mediumGrid {
+	.row {
+		@include row;
+		flex-direction: row;
+	}
+
+	.reverse-row {
+		@include row;
+		flex-direction: row-reverse;
+	}
+
+	@for $size from 1 through $co-grid-size {
+		.col-#{$size} {
+			@include column($size);
+		}
+
+		.col-offset-#{$size} {
+			margin-left: percentage($size / $co-grid-size);
+		}
+	}
+}
+
+
+// Large
+
+@include largeGrid {
+	.row-lg {
+		@include row;
+		flex-direction: row;
+	}
+
+	.reverse-row-lg {
+		@include row;
+		flex-direction: row-reverse;
+	}
+
+	@for $size from 1 through $co-grid-size {
+		.col-lg-#{$size} {
+			@include column($size);
+		}
+
+		.col-lg-offset-#{$size} {
+			margin-left: percentage($size / $co-grid-size);
+		}
+	}
+}

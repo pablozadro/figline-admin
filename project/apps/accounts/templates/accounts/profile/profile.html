@@ -1,0 +1,21 @@
+{% extends "core/layout.html" %}
+{% block content %}
+<div class="container">
+  <section>
+    <header>
+      <h2 class="title md">Profile</h2>
+    </header>
+
+    <article>
+      <header>
+        <h3 class="title rg">Overview</h3>
+      </header>
+      <ul class="list is--bordered">
+        <li>Email: {{ request.user.email }}</li>
+        <li>Username: {{ request.user.username }}</li>
+        <li>Join date: {{ request.user.date_joined | date:"d/m/y H:m" }}</li>
+      </ul>
+    </article>
+  </section>
+</div>
+{% endblock content %}

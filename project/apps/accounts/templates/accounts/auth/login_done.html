@@ -1,0 +1,9 @@
+{% extends "accounts/auth/layout.html" %}
+{% block auth_content %}
+<article>
+	<header>
+		<h3 class="title rg">Log in done</h3>
+	</header>
+  <p>Welcome <a class="link primary" href="{% url 'accounts:profile' %}" >{{ request.user.email }}</a></p>
+</section>
+{% endblock auth_content %}

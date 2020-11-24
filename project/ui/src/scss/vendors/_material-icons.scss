@@ -1,0 +1,9 @@
+.material-icons { vertical-align: middle; }
+
+a,
+input,
+button {
+  & > .material-icons {
+    pointer-events: none;
+  }
+}

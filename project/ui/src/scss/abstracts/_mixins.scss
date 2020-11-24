@@ -1,0 +1,45 @@
+@mixin transition($property, $duration) {
+	-webkit-transition: unquote($property) $duration ease;
+	-moz-transition: unquote($property) $duration ease;
+	-ms-transition: unquote($property) $duration ease;
+	-o-transition: unquote($property) $duration ease;
+	transition: unquote($property) $duration ease;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  border-radius: $size;
+  text-align: center;
+}
+
+@mixin colorMix($name) {
+  color: mix($name, 'color');
+  background-color: mix($name, 'background-color');
+}
+
+@mixin colorMixInteractive($name) {
+  @include colorMix($name);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: mix($name, 'color');
+    background-color: mix($name, 'hover-background-color');
+    outline: none;
+  }
+
+  &.is--disabled,
+  &[disabled] {
+    color: mix($name, 'disabled-color');
+
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+      color: mix($name, 'disabled-color');
+      background-color: mix($name, 'background-color');
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/**
+* ---------------------------------------------------------------------------- *
+* List
+* ---------------------------------------------------------------------------- *
+*/
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    margin: ($co-box-yy / 2) 0;
+    padding: ($co-box-yy / 2) $co-box-yy ($co-box-yy / 2) 0;
+  }
+
+  & + & { margin-top: $co-box-x; }
+
+  & > li > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+
+    & > li {
+      margin-right: $co-box-x;
+    }
+  }
+
+  &.is--inline-block {
+    display: inline-block;
+  }
+
+  &.is--bordered {
+    & > li {
+      border-bottom: 1px solid mix('gray', 'border-color');
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &.is--stripped {
+    & > li {
+      padding-left: $co-box-x / 2;
+    }
+
+    & > li:nth-child(even) {
+      background-color: mix('gray', 'background-color');
+    }
+  }
+}
