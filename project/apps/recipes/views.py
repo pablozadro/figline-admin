@@ -13,7 +13,7 @@ class RecipesList(APIView):
     """
     List all recipes, or create a new recipe.
     """
-    permission_classes = [ permissions.IsAuthenticated ]
+    permission_classes = [ permissions.IsAuthenticatedOrReadOnly ]
     filterset_class = RecipeFilter
 
     def get(self, request, format=None):

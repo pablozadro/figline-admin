@@ -15,7 +15,7 @@ class IngredientsList(APIView):
     """
     List all ingredients, or create a new ingredient.
     """
-    permission_classes = [ permissions.IsAuthenticated ]
+    permission_classes = [ permissions.IsAuthenticatedOrReadOnly ]
     filterset_class = IngredientFilter
 
     def get(self, request, format=None):
@@ -42,7 +42,7 @@ class IngredientDetail(APIView):
     """
 
     lookup_field = 'id'
-    permission_classes = [ permissions.IsAuthenticated ]
+    permission_classes = [ permissions.IsAuthenticatedOrReadOnly ]
 
     def get_object(self, id):
         try:
