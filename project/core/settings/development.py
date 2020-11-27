@@ -16,6 +16,11 @@ def showToolbar():
 
 SHOW_TOOLBAR_CALLBACK = showToolbar
 
+# CORS
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#   'http://localhost:3000',
+# )
 
 # Email
 DEFAULT_FROM_EMAIL = 'figline@localhost'
@@ -31,12 +36,14 @@ INSTALLED_APPS = BASE_APPS + [
     'apps.landing',
     'apps.tools',
     'apps.ingredients',
-    'apps.recipes'
+    'apps.recipes',
+    'corsheaders',
 ]
 
 
 # Middlewares
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

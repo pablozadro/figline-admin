@@ -7,3 +7,4 @@ Markdown==3.3.3
 python-decouple==3.3
 pytz==2020.4
 sqlparse==0.4.1
+django-cors-headers==3.5.0
